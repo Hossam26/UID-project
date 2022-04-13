@@ -1,0 +1,38 @@
+.navbar-brand{
+    color:#0000ff;
+}
+
+
+.dropdown {
+background-color: rgba(0, 0, 255, 0.82);
+width: 150px;
+
+}
+ .fa-user {
+     color:#02a7f0 !important;
+}
+ .dropdown-item{
+width: 200px;
+}
+.dropdown-item:hover{
+  background-color: gray;
+}
+.search{
+    width: 350px !important;
+}
+ .dropdown-toggle::after {
+margin-left: 50px;
+}
+.user{
+    background-color: transparent !important;
+}
+.user .dropdown-toggle::after {
+margin-left: 0px;
+}
+.dropdown-toggle{
+    font-weight: 600;
+}
+.btn{
+border: 1px solid black;
+background-color: rgba(0, 0, 255, 0.82);
+}
