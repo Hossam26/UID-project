@@ -52,4 +52,4 @@ import { CoursPageComponent } from './cours-page/cours-page.component';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
-export class AppModule { }
+export class AppModule {}
