@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MatFormFieldModule } from '@angular/material/form-field'; 
 import { OnlineDegreesComponent } from './online-degrees/online-degrees.component';
+import { CoursPageComponent } from './cours-page/cours-page.component'; 
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { OnlineDegreesComponent } from './online-degrees/online-degrees.componen
     AboutComponent,
     LogInComponent,
     SignUpComponent,
-    OnlineDegreesComponent
+    OnlineDegreesComponent,
+    CoursPageComponent
   ],
   imports: [
     BrowserModule,
@@ -52,4 +54,4 @@ import { OnlineDegreesComponent } from './online-degrees/online-degrees.componen
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
-export class AppModule { }
+export class AppModule {}
