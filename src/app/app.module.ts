@@ -17,7 +17,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon'
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { CoursPageComponent } from './cours-page/cours-page.component'; 
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     HomeComponent,
     AboutComponent,
     LogInComponent,
-    SignUpComponent
+    SignUpComponent,
+    CoursPageComponent
   ],
   imports: [
     BrowserModule,
