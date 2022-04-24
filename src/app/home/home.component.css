@@ -1,0 +1,91 @@
+.sec1{
+background-color: rgba(129, 211, 248, 0.15);
+height: 255px;
+padding-top: 20px;
+}
+
+.wel{
+ color:rgba(0, 0, 255, 1);
+ position: relative;
+ top: 70%;
+ padding-left: 150px;
+ 
+}
+.tell{
+    width: 496px;
+    height: 220px;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 7px 5px 8px 0px rgba(51, 51, 51, 1);
+    }
+
+.tell .headd{
+   margin-bottom: 20px;
+}    
+
+.tell input{
+    width:250px;
+    background-color: #d7d7d7;
+    border: none;
+}
+.tell a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #0000ff;
+    padding-left: 10px;
+}
+.homelink{
+    width: 1536px;
+    height: 58px;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+.linkk{
+    padding-left: 100px;
+
+}
+.linkk:hover{
+    text-decoration: underline;
+}
+.sec2{
+    height: 1310px;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid #ffffff;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+}
+.get{
+  
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 600;
+    padding-left: 100px;
+    padding-bottom: 80px;
+}
+.img-slide{
+    width: 269px;
+   
+}
+.free{
+    border: 1px solid black;
+    padding: 2px 5px;
+    background-color: yellow;
+    position: relative;
+    left: 80%;
+    top:-15%;
+    border-radius: 15px;
+}
+.my-slider{
+    width: 40%;
+    margin: auto;
+}
+.my-slider i{
+    color: aqua !important;
+}
+.owl-nav  {
+   background-color: red !important;
+}

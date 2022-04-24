@@ -14,13 +14,10 @@ import { AboutComponent } from './about/about.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
