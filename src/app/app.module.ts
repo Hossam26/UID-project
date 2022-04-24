@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon'
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { OnlineDegreesComponent } from './online-degrees/online-degrees.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     HomeComponent,
     AboutComponent,
     LogInComponent,
-    SignUpComponent
+    SignUpComponent,
+    OnlineDegreesComponent
   ],
   imports: [
     BrowserModule,
