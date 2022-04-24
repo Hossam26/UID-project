@@ -2,18 +2,16 @@
 .owl-nav .owl-prev {
     position: relative;
     transform: translateY(-250px);
-    left: -60%;
+    left: -40%;
         color: #000080 !important ;
 }
 
 .owl-nav .owl-next {
     position: relative;
     transform: translateY(-250px);
-    left: 60%;
+    left: 750px;
     color: #000080 !important;
 }
 .owl-nav .change:hover {
 background-color: #f2f2f2;}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
