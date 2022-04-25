@@ -1,5 +1,6 @@
 import { NgModule, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import {
   FormGroup,
   FormControl,
@@ -26,6 +27,7 @@ import { OnlineDegreesComponent } from './online-degrees/online-degrees.componen
 import { CoursPageComponent } from './cours-page/cours-page.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -53,10 +55,11 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     FormsModule,
     MatDialogModule,
     MatFormFieldModule,
+    BrowserAnimationsModule,
   ],
 
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule { }
