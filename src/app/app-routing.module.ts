@@ -17,13 +17,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent, canActivate: [AuthGuardService] },
   { path: 'log-in', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },
-<<<<<<< HEAD
-  { path: 'online-degrees', component: OnlineDegreesComponent },
-  { path: 'cours-page/:id', component: CoursPageComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'edit-profile', component: EditProfileComponent },
-=======
   {
     path: 'online-degrees',
     component: OnlineDegreesComponent,
@@ -40,7 +34,6 @@ const routes: Routes = [
     component: EditProfileComponent,
     canActivate: [AuthGuardService],
   },
->>>>>>> cf552476fe2e433f9e275210f61090180deb2e45
 ];
 
 @NgModule({
