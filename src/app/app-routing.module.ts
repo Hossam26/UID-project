@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'log-in', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'online-degrees', component: OnlineDegreesComponent },
-  { path: 'cours-page', component: CoursPageComponent },
+  { path: 'cours-page/:id', component: CoursPageComponent },
   { path: 'about', component: AboutComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'edit-profile', component: EditProfileComponent },
