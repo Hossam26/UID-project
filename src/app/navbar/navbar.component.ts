@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthGuardService } from '../auth-guard.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    private _Router: Router,
+    private _AuthGuardService: AuthGuardService
+  ) {
   }
-
+  logout() {
+    console.log("cfhnvb");
+    
+    localStorage.removeItem('token');
+    this._AuthGuardService.isLogin.next(false);
+    this._Router.navigateByUrl('/log-in');
+  }
+  ngOnInit(): void {}
 }
