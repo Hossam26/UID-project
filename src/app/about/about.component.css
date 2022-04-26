@@ -170,8 +170,7 @@ body {
 #u884 {
     border-width: 0px;
     position: absolute;
-    left: 0px;
-    top: 82px;
+    
     width: 1549px;
     height: 442px;
     display: flex;
@@ -258,7 +257,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 66px;
-    top: 667px;
+    top: 630px;
     width: 714px;
     height: 152px;
     display: flex;
@@ -297,7 +296,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 844px;
-    top: 579px;
+    top: 550px;
     width: 687px;
     height: 303px;
     display: flex;

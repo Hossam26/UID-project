@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    background-color: rgba(242, 242, 242, 1);
+    background-color:white ;
     background-image: none;
     position: relative;
     left: 0px;
@@ -42,8 +42,7 @@ body {
 #u605 {
     border-width: 0px;
     position: absolute;
-    left: 0px;
-    top: 109px;
+   
     width: 1536px;
     height: 2290px;
     display: flex;
@@ -86,7 +85,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 68px;
-    top: 171px;
+    top: 100px;
     width: 203px;
     height: 47px;
     display: flex;
@@ -114,7 +113,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 1088px;
-    top: 162px;
+    top: 100px;
     width: 177px;
     height: 45px;
     display: flex;
@@ -174,9 +173,9 @@ body {
     border-width: 0px;
     position: absolute;
     left: 60px;
-    top: 2211px;
+    top: 2180px;
     width: 1234px;
-    height: 1px;
+    height: 10px;
     display: flex;
     -webkit-transform: rotate(0.000248691829761882deg);
     -moz-transform: rotate(0.000248691829761882deg);
@@ -219,7 +218,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 60px;
-    top: 305px;
+    top: 270px;
     width: 612px;
     height: 92px;
     display: flex;
@@ -508,7 +507,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 61px;
-    top: 283px;
+    top: 220px;
     width: 1234px;
     height: 1px;
     display: flex;
@@ -892,44 +891,8 @@ body {
 
 }
 
-#u623_input.disabled {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    padding: 2px 2px 2px 2px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 13px;
-    letter-spacing: normal;
-    color: #000000;
-    vertical-align: none;
-    text-align: left;
-    text-transform: none;
-    background-color: transparent;
-    border-color: transparent;
-}
 
-#u623_div {
-    border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    background: inherit;
-    background-color: rgba(255, 255, 255, 1);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    border-radius: 0px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
 
 #u623 {
     border-width: 0px;
@@ -941,32 +904,8 @@ body {
     display: flex;
 }
 
-#u623 .text {
-    position: absolute;
-    align-self: center;
-    padding: 2px 2px 2px 2px;
-    box-sizing: border-box;
-    width: 100%;
-}
 
-#u623_div.disabled {
-    border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    background: inherit;
-    background-color: rgba(240, 240, 240, 1);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    border-radius: 0px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
 
 
 
@@ -989,44 +928,9 @@ body {
 
 }
 
-#u624_input.disabled {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    padding: 2px 2px 2px 2px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 13px;
-    letter-spacing: normal;
-    color: #000000;
-    vertical-align: none;
-    text-align: left;
-    text-transform: none;
-    background-color: transparent;
-    border-color: transparent;
-}
 
-#u624_div {
-    border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    background: inherit;
-    background-color: rgba(255, 255, 255, 1);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    border-radius: 0px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
+
 
 #u624 {
     border-width: 0px;
@@ -1038,32 +942,9 @@ body {
     display: flex;
 }
 
-#u624 .text {
-    position: absolute;
-    align-self: center;
-    padding: 2px 2px 2px 2px;
-    box-sizing: border-box;
-    width: 100%;
-}
 
-#u624_div.disabled {
-    border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    background: inherit;
-    background-color: rgba(240, 240, 240, 1);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    border-radius: 0px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
+
 
 
 
@@ -1086,44 +967,8 @@ body {
 
 }
 
-#u625_input.disabled {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    padding: 2px 2px 2px 2px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 13px;
-    letter-spacing: normal;
-    color: #000000;
-    vertical-align: none;
-    text-align: left;
-    text-transform: none;
-    background-color: transparent;
-    border-color: transparent;
-}
 
-#u625_div {
-    border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    background: inherit;
-    background-color: rgba(255, 255, 255, 1);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    border-radius: 0px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
 
 #u625 {
     border-width: 0px;
@@ -1135,32 +980,9 @@ body {
     display: flex;
 }
 
-#u625 .text {
-    position: absolute;
-    align-self: center;
-    padding: 2px 2px 2px 2px;
-    box-sizing: border-box;
-    width: 100%;
-}
 
-#u625_div.disabled {
-    border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    background: inherit;
-    background-color: rgba(240, 240, 240, 1);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    border-radius: 0px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
+
 
 
 
@@ -1183,44 +1005,8 @@ body {
 
 }
 
-#u626_input.disabled {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    padding: 2px 2px 2px 2px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 13px;
-    letter-spacing: normal;
-    color: #000000;
-    vertical-align: none;
-    text-align: left;
-    text-transform: none;
-    background-color: transparent;
-    border-color: transparent;
-}
 
-#u626_div {
-    border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    background: inherit;
-    background-color: rgba(255, 255, 255, 1);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    border-radius: 0px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
 
 #u626 {
     border-width: 0px;
@@ -1232,32 +1018,9 @@ body {
     display: flex;
 }
 
-#u626 .text {
-    position: absolute;
-    align-self: center;
-    padding: 2px 2px 2px 2px;
-    box-sizing: border-box;
-    width: 100%;
-}
 
-#u626_div.disabled {
-    border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    background: inherit;
-    background-color: rgba(240, 240, 240, 1);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    border-radius: 0px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
+
 
 
 #u627_input {
@@ -1279,44 +1042,9 @@ body {
 
 }
 
-#u627_input.disabled {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    padding: 2px 2px 2px 2px;
-    font-family: 'Arial', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 13px;
-    letter-spacing: normal;
-    color: #000000;
-    vertical-align: none;
-    text-align: left;
-    text-transform: none;
-    background-color: transparent;
-    border-color: transparent;
-}
 
-#u627_div {
-    border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    background: inherit;
-    background-color: rgba(255, 255, 255, 1);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    border-radius: 0px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+
+
 
 #u627 {
     border-width: 0px;
@@ -1328,43 +1056,11 @@ body {
     display: flex;
 }
 
-#u627 .text {
-    position: absolute;
-    align-self: center;
-    padding: 2px 2px 2px 2px;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-#u627_div.disabled {
-    border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 329px;
-    height: 35px;
-    background: inherit;
-    background-color: rgba(240, 240, 240, 1);
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(121, 121, 121, 1);
-    border-radius: 0px;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-
-
-
-
-
 #u628 {
     border-width: 0px;
     position: absolute;
     left: 312px;
-    top: 1170px;
+    top: 1162px;
     width: 33px;
     height: 30px;
     display: flex;
@@ -1374,11 +1070,6 @@ body {
     width: 50px;
     height: 50px;
 }
-
-
-
-
-
 
 
 #u629 {
@@ -1699,7 +1390,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 296px;
-    top: 1442px;
+    top: 1432px;
     width: 33px;
     height: 30px;
     display: flex;
@@ -1722,7 +1413,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 70px;
-    top: 637px;
+    top: 630px;
     width: 1234px;
     height: 1px;
     display: flex;
@@ -2269,7 +1960,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 218px;
-    top: 2272px;
+    top: 2260px;
     width: 177px;
     height: 45px;
     display: flex;
@@ -2305,7 +1996,7 @@ body {
     border-width: 0px;
     position: absolute;
     left: 41px;
-    top: 1640px;
+    top: 1600px;
     width: 1234px;
     height: 1px;
     display: flex;

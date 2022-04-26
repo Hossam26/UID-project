@@ -22,7 +22,7 @@ const routes: Routes = [
     component: OnlineDegreesComponent,
     canActivate: [AuthGuardService],
   },
-  { path: 'cours-page', component: CoursPageComponent },
+  { path: 'cours-page/:id', component: CoursPageComponent },
   {
     path: 'profile',
     component: ProfileComponent,
