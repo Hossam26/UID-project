@@ -7,20 +7,32 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { OnlineDegreesComponent } from './online-degrees/online-degrees.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { AuthGuardService } from './auth-guard.service';
 
 import { CoursPageComponent } from './cours-page/cours-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuardService] },
+  { path: 'about', component: AboutComponent, canActivate: [AuthGuardService] },
   { path: 'log-in', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },
-  { path: 'online-degrees', component: OnlineDegreesComponent },
+  {
+    path: 'online-degrees',
+    component: OnlineDegreesComponent,
+    canActivate: [AuthGuardService],
+  },
   { path: 'cours-page', component: CoursPageComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'edit-profile', component: EditProfileComponent },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'edit-profile',
+    component: EditProfileComponent,
+    canActivate: [AuthGuardService],
+  },
 ];
 
 @NgModule({

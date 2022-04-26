@@ -89,3 +89,6 @@ padding-top: 20px;
 .owl-nav  {
    background-color: red !important;
 }
+.footer{
+    bottom: 0px !important;
+}
