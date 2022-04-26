@@ -12,25 +12,42 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./log-in.component.css'],
 })
 export class LogInComponent implements OnInit {
-  email = new FormControl('', [Validators.required, Validators.email]);
+  mail = new FormControl('', [Validators.required, Validators.email]);
 
   public getErrorMessage() {
-    if (this.email.hasError('required')) {
+    if (this.mail.hasError('required')) {
       return 'You must enter a value';
     }
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+    return this.mail.hasError('email') ? 'Not a valid email' : '';
   }
   //
   hide = true;
-  constructor(private _AuthService: AuthService, private _Router: Router,private _AuthGuardService:AuthGuardService) {}
-  login= async()=> {
-     //await this._AuthService.login({})
-
-        localStorage.setItem('token', 'true');
-        this._AuthGuardService.isLogin.next(true);
-        this._Router.navigateByUrl('/home');
-      
-  }
+  constructor(
+    private _AuthService: AuthService,
+    private _Router: Router,
+    private _AuthGuardService: AuthGuardService
+  ) {}
+  loginForm: FormGroup = new FormGroup({
+    mail: new FormControl(null, [Validators.required, Validators.email]),
+    pass: new FormControl(null, [
+      Validators.required,
+      Validators.pattern(/[A-Za-z]{1,}[0-9]{1,}/),
+      Validators.minLength(8),
+    ]),
+  });
+  login = async () => {
+    const res= await this._AuthService.login(this.loginForm.value);
+    if(res){
+      localStorage.setItem('token', 'true');
+      this._AuthGuardService.isLogin.next(true);
+      location.href = '/home';
+    }
+    else{
+      return
+    }
+  
+    
+  };
   ngOnInit(): void {}
 }

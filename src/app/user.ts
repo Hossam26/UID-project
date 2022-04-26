@@ -1,6 +1,8 @@
 export interface User {
-    id:string
-fname:string
-lname:string
-
+  userName: string;
+  fname: string;
+  lname: string;
+  mail: string;
+  pass: string;
+  job?:string
 }

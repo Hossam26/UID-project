@@ -14,8 +14,7 @@ export class NavbarComponent implements OnInit {
   ) {
   }
   logout() {
-    console.log("cfhnvb");
-    
+
     localStorage.removeItem('token');
     this._AuthGuardService.isLogin.next(false);
     this._Router.navigateByUrl('/log-in');

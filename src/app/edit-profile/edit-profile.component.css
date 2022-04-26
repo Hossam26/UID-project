@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    background-color:white ;
+    background-color: white;
     background-image: none;
     position: relative;
     left: 0px;
@@ -42,7 +42,7 @@ body {
 #u605 {
     border-width: 0px;
     position: absolute;
-   
+
     width: 1536px;
     height: 2290px;
     display: flex;

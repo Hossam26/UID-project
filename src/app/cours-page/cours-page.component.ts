@@ -7,11 +7,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./cours-page.component.css'],
 })
 export class CoursPageComponent implements OnInit {
-  constructor(private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.queryParams.subscribe((params) => {
-      let date = params['id'];
-      console.log(date); // Print the parameter to the console.
-    });
+  id:any = '';
+  constructor(private _ActivatedRoute: ActivatedRoute) {
+    this.id = _ActivatedRoute.snapshot.paramMap.get('id');    
   }
   course_name = [
     {

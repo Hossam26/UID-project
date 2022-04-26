@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 declare const $: any;
   $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
@@ -31,7 +32,7 @@ declare const $: any;
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
-   
+  constructor(private _data:DataService) {
+  }
   ngOnInit(): void {}
 }
