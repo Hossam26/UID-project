@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent, canActivate: [AuthGuardService] },
   { path: 'log-in', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },
+  { path: 'about', component: AboutComponent },
   {
     path: 'online-degrees',
     component: OnlineDegreesComponent,
