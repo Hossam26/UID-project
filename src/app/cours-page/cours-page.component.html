@@ -16,76 +16,133 @@
 <body>
 
     <div class="h-auto div1">
-           <div class="row" style="background-color:rgb(2, 123, 255); color: aliceblue;">
+        <div class="row" style="background-color:rgb(2, 123, 255); color: aliceblue;">
 
-        <div class="col-6 p-5">
-            <a style="color: aliceblue; text-decoration: none;" href="">Browse</a>
-            >
-            <a style="color: aliceblue; text-decoration: none;" href="">computer science</a>
-            >
-            <a style="color: aliceblue; text-decoration: none;" href="">Software Development</a>
-            <br>
-            <br>
-            <h2>Analysis of Algorithms</h2>
-            <br>
-            <br>
-            <button>Enroll</button>
+            <div class="col-6 p-5">
+                <a href="">Browse</a>
+                >
+                <a href="">computer science</a>
+                >
+                <a href="">Software Development</a>
+                <br>
+                <br>
+                <h1>{{course_name[0].courseName|uppercase}}</h1>
+                <br>
+                <br>
+                <button class="button1">Enroll</button>
+                <p>152,406 already enrolled</p>
+            </div>
+
+            <div class="col-6  p-5">
+                <label>Offered By</label>
+                <h1>Ain Shams University</h1>
+            </div>
         </div>
 
-        <div class="col-6  p-5">
-            <label>Offered By</label>
-            <h3>Ain Shams University</h3>
+        <div class="row">
+            <div class="col-8 p-5">
+                <h3>About this Course</h3>
+                <label>265,782 recent views</label>
+                <br>
+                <p>
+                {{course_name[0].about_course}}
+                </p>
+            </div>
+            <div class="col-4  p-5 ">
+                <div class="p-5" style="background-color: rgba(236, 236, 236,1);">
+                    <label for="" class="w-100" style="text-align: center;">learn career outcomes</label>
+                    <h1 class="d-inline w-100">10%</h1>
+                    <p class="d-inline w-100 p-5" style="text-align: center;"> a new career after completing these
+                        courses</p>
+                    <br>
+                    <br>
+                    <h1 class="d-inline w-100">23%</h1>
+                    <p class="d-inline w-100 p-5" style="text-align: center;"> got a tangible career benefit from this
+                        course </p>
+                    <br>
+                    <br>
+                    <h1 class="d-inline w-100">13%</h1>
+                    <p class="d-inline w-100 p-5" style="text-align: center;"> got a pay increase or promotion </p>
+
+                </div>
+                <div>
+                <img src="assets/u10.png" class="p-2">
+                <h3 class="d-inline"> Flexible deadlines</h3>
+                <br>
+                <img src="assets/u11.png" class="p-2">
+                <h3 class="d-inline"> Shareable Certificate</h3>
+                <br>
+                <img src="assets/u12.png" class="p-2">
+                <h3 class="d-inline"> 100% online</h3>
+                <br>
+                <img src="assets/u13.png" class="p-2">
+                <h3 class="d-inline"> Beginner Level</h3>
+                <br>
+                <img src="assets/u14.png" class="p-2">
+                <h3 class="d-inline"> Approx. 13 hours to complete</h3>
+                <br>
+                <img src="assets/u15.png" class="p-2">
+                <h3 class="d-inline"> English</h3>
+                <br>
+                </div>
+            </div>
+
+
         </div>
+        <div class="p-5 ">
+            <h1>Instructor</h1>
+            <p>Instructor rating 4.64/5 (1,992 Ratings)</p>
+
+            <img src="assets/user logo.png" alt="Instructor image" class="d-inline-block align-top">
+            <div class="d-inline-block">
+                <br>
+                <p>{{Instructors[0].Name|uppercase}}</p>
+                <p>{{Instructors[0].work|titlecase}}</p>
+                <p>{{Instructors[0].numLearners}}</p>
+                <p>{{Instructors[0].courses}}</p>
+            </div>
+        </div>
+
+        <div class="p-5 ">
+            <h1>Offered by</h1>
+            <img src="assets/Asu.png" alt="Instructor image" class="d-inline-block align-top">
+            <div class="d-inline-block">
+                <br>
+                <p>Ain shams university</p>
+                <p>Our mission</p>
+                <p>We believe all teams have potential to do amazing things.<br> From space travel and DNA sequencing,
+                    to video games and
+                    nonprofits<br>, our mission is to unleash the potential in every team and help advance <br> humanity
+                    through the power of
+                    software.</p>
+            </div>
+        </div>
+        <div class="p-5">
+            <hr>
+            <!--week 1-->
+            <h1 style="text-align: center;">Syllabus - What you will learn from this course</h1>
+            <h3 style="text-align: center;">Content Rating 98%(10,949 ratings)</h3>
+           
+            <div class="row" *ngFor="let content of course_content">
+                <div class="col-2">
+                    <h1 style="text-align: center;">W E E K<br>{{content.Week}}</h1>
+                </div>
+                <div class="col-9">
+                    <img src="assets/u150.png">
+                    <h3 class="d-inline"> {{content.time|lowercase}}</h3>
+
+                    <h2>{{content.contentName|titlecase}}</h2>
+                    <p>
+                        {{content.dis}}
+                    </p>
+                    <img src="assets/u154.png">
+                    <h3 class="d-inline"> {{content.vid}}</h3>
+                </div>
+                        <hr>
+            </div>
+        </div>
+
     </div>
-    
-    <div class="row">
-        <div class="col-8 p-5">
-            <h3>About this Course</h3>
-            <label>265,782 recent views</label>
-            <br>
-            <h3>
-            Agile teams use “just enough” planning and an incremental approach to accomplishing the work of the team.
-            Every project
-            and every team uses a custom agile methodology. This course discusses common foundational principles and
-            practices used
-            by agile methodologies, providing the student a flexible set of tools to use in any role (e.g. product
-            owner, scrum
-            master, project manager, team member) on any agile team. This course mainly discusses agile and lean
-            principles, the
-            kanban and scrum agile methodologies, and uses Atlassian Jira Software Cloud as the main software tool to
-            apply hands-on
-            learning of the topics. The course includes instruction on "classic" Jira projects as well as the new
-            "next-gen" Jira projects.
-
-            Students can use the free plan of Atlassian Jira Software Cloud to complete the hands-on labs associated
-            with this
-            course. By the time you have completed this course, you will have a strong foundational understanding of
-            agile
-            principles and practices, and strong hands-on experience with Atlassian Jira Software Cloud. You will be the
-            site
-            administrator for your Jira account, so you will be able to perform basic administration tasks on your site.
-            You should
-            be able to continuously configure your Jira project(s) to match your team's custom agile methodology.
-
-            You can watch the videos and take the quizzes from your phone if you want, but the hands-on labs using
-            Atlassian Jira
-            Software Cloud require you to have a Windows, Mac or Linux computer.
-
-            This course tries to be as concise as possible. It will probably take you about 6-12 hours to go through,
-            but your
-            mileage may vary. It is highly encouraged that you apply what you learn to managing personal agile projects
-            after the
-            course is complete.
-                </h3>
-        </div>
-
-        <div class="col-4  p-5">
-
-        </div>
-
-
-    </div>
-</div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
