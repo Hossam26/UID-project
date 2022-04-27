@@ -7,31 +7,41 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./cours-page.component.css'],
 })
 export class CoursPageComponent implements OnInit {
-  id: any = '';
+  id: any = 0;
+  contents: Array<any> = [];
   constructor(private _ActivatedRoute: ActivatedRoute) {
-    this.id = _ActivatedRoute.snapshot.paramMap.get('id');
+    this.id = Number(_ActivatedRoute.snapshot.paramMap.get('id'));
+    if (this.id == 1) {
+      this.contents = this.course_content1;
+    }
+    if (this.id == 2) {
+      this.contents = this.course_content2;
+    }
+    if (this.id == 3) {
+      this.contents = this.course_content3;
+    }
+    if (this.id == 4) {
+      this.contents = this.course_content4;
+    }
   }
+
   course_name = [
     {
-      id: '1',
       courseName: 'Data Science Math Skills ',
       about_course:
         'Data science courses contain math—no avoiding that! This course is designed to teach learners the basic math you will need in order to be successful in almost any data science math course and was created for learners who have basic math skills but may not have taken algebra or pre-calculus. Data Science Math Skills introduces the core math that data science is built upon, with no extra complexity, introducing unfamiliar ideas and math symbols one-at-a-time. ',
     },
     {
-      id: '2',
       courseName: 'Bitcoin and Cryptocurrency Technologies',
       about_course:
         'To really understand what is special about Bitcoin, we need to understand how it works at a technical level. We’ll address the important questions about Bitcoin',
     },
     {
-      id: '3',
       courseName: 'Programming Languages, Part A',
       about_course:
         'This course is an introduction to the basic concepts of programming languages, with a strong emphasis on functional programming.',
     },
     {
-      id: '4',
       courseName: 'Computer Science: Programming with a Purpose',
       about_course:
         'The basis for education in the last millennium was “reading, writing, and arithmetic;” now it is reading, writing, and computing. Learning to program is an essential part of the education of every student',

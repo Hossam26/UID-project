@@ -26,7 +26,7 @@
                 <a href="">Software Development</a>
                 <br>
                 <br>
-                <h1>{{course_name[0].courseName|uppercase}}</h1>
+                <h1>{{course_name[id-1].courseName|uppercase}}</h1>
                 <br>
                 <br>
                 <button class="button1">Enroll</button>
@@ -45,7 +45,7 @@
                 <label>265,782 recent views</label>
                 <br>
                 <p>
-                {{course_name[0].about_course}}
+                {{course_name[id-1].about_course}}
                 </p>
             </div>
             <div class="col-4  p-5 ">
@@ -93,19 +93,19 @@
             <h1>Instructor</h1>
             <p>Instructor rating 4.64/5 (1,992 Ratings)</p>
 
-            <img src="assets/user logo.png" alt="Instructor image" class="d-inline-block align-top">
-            <div class="d-inline-block">
+            <img src="assets/user logo.png" alt="Instructor image" class="d-inline align-top">
+            <div id="myblock" class="d-inline">
                 <br>
-                <p>{{Instructors[0].Name|uppercase}}</p>
-                <p>{{Instructors[0].work|titlecase}}</p>
-                <p>{{Instructors[0].numLearners}}</p>
-                <p>{{Instructors[0].courses}}</p>
+                <p>{{Instructors[id-1].Name|uppercase}}</p>
+                <p>{{Instructors[id-1].work|titlecase}}</p>
+                <p>{{Instructors[id-1].numLearners}}</p>
+                <p>{{Instructors[id-1].courses}}</p>
             </div>
         </div>
 
         <div class="row p-5 ">
             <h1>Offered by</h1>
-            <img src="assets/Asu.png" alt="Instructor image" class="d-inline-block align-top">
+            <img id="img1" src="assets/Asu.png" alt="Instructor image" class="d-inline-block align-top">
             <div class="d-inline-block">
                 <br>
                 <p>Ain shams university</p>
@@ -123,7 +123,7 @@
             <h1 style="text-align: center;">Syllabus - What you will learn from this course</h1>
             <h3 style="text-align: center;">Content Rating 98%(10,949 ratings)</h3>
            
-            <div class="row" *ngFor="let content of course_content1">
+            <div class="row" *ngFor="let content of contents">
                 <div class="col-2">
                     <h1 style="text-align: center;">W E E K<br>{{content.Week}}</h1>
                 </div>

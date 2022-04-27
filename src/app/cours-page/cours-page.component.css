@@ -37,3 +37,10 @@ a:active {
     height: 1000px;
     
 }
+#img1{
+    width: 200px;
+    height: 200px;
+}
+#myblock{
+    display: inline-block;
+}
