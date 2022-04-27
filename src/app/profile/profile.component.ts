@@ -10,11 +10,11 @@ import { User } from '../user';
 export class ProfileComponent implements OnInit {
   userData: User | any;
   constructor(private _data: DataService) {
-    this.userData=this._data.getUserData()
+    this.userData = this._data.getUserData();
   }
-  
+
   ngOnInit(): void {}
-  
+
   achievements: string[] = ['java for android', 'python', 'C++'];
   dates: string[] = ['10/12/2020', '9/22/2020', '9/12/2020'];
 }
