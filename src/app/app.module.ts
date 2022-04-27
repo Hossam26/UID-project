@@ -28,7 +28,7 @@ import { CoursPageComponent } from './cours-page/cours-page.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AdminPageComponent } from './admin-page/admin-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +42,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CoursPageComponent,
     ProfileComponent,
     EditProfileComponent,
+    AdminPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +61,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [],
 })
-export class AppModule { }
+export class AppModule {}

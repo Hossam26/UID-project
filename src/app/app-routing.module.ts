@@ -10,20 +10,35 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { AuthGuardService } from './auth-guard.service';
 
 import { CoursPageComponent } from './cours-page/cours-page.component';
-
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { AddNewCourseComponent } from './add-new-course/add-new-course.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService] },
   { path: 'about', component: AboutComponent, canActivate: [AuthGuardService] },
   { path: 'log-in', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent, canActivate: [AuthGuardService] },
   {
     path: 'online-degrees',
     component: OnlineDegreesComponent,
     canActivate: [AuthGuardService],
   },
-  { path: 'cours-page/:id', component: CoursPageComponent },
+  {
+    path: 'admin',
+    component: AdminPageComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'new-course',
+    component: AddNewCourseComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'cours-page/:id',
+    component: CoursPageComponent,
+    canActivate: [AuthGuardService],
+  },
   {
     path: 'profile',
     component: ProfileComponent,
