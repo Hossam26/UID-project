@@ -4,6 +4,6 @@ export interface User {
   lname: string;
   mail: string;
   pass: string;
-  job?:string;
-  admin?:boolean;
+  job?: string;
+  admin?: boolean;
 }

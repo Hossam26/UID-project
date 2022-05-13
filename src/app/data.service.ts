@@ -1,24 +1,19 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
+import { DBoperation } from './DB-operations';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  constructor() {}
+  constructor(private data: DBoperation) {}
 
-  getUserData() {
-    let user: User = JSON.parse(localStorage.getItem('currentUser') || '{}');
-    return user;
+  getUserData(id: any): Observable<User> {
+    return this.data.getStudent(id);
   }
   editUser(user: User) {
-    localStorage.setItem('currentUser', JSON.stringify(user));
-    let users: User[] = [];
-    users = JSON.parse(localStorage.getItem('users') || '[]');
-    const newUsers = users.filter((e) => {
-      return e.mail != user.mail;
-    });
-    newUsers.push(user);
+    this.data.updateStudent(user);
   }
   EnrollCourseToUser(course: any) {
     let user: User = JSON.parse(localStorage.getItem('currentUser') || '{}');
@@ -33,5 +28,4 @@ export class DataService {
     courses = JSON.parse(localStorage.getItem(user.mail) || '[]');
     return courses;
   }
-  
 }

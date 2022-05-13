@@ -8,6 +8,7 @@ import { User } from './user';
   providedIn: 'root',
 })
 export class AuthService {
+  usermail = new BehaviorSubject('');
   admin = new BehaviorSubject(false);
   constructor(
     private _Router: Router,
@@ -23,7 +24,7 @@ export class AuthService {
   }
   login(loginValues: User) {
     let users: User[] = [];
-
+    this.usermail.next(loginValues.mail);
     users = JSON.parse(localStorage.getItem('users') || '[]');
     const user = users.filter((e) => {
       return e.mail == loginValues.mail && e.pass == loginValues.pass;
