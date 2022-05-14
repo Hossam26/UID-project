@@ -15,6 +15,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -29,6 +33,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminPageComponent } from './admin-page/admin-page.component';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +48,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     ProfileComponent,
     EditProfileComponent,
     AdminPageComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -57,6 +63,9 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     MatDialogModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
   ],
 
   providers: [],

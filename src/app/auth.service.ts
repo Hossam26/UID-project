@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { AuthGuardService } from './auth-guard.service';
 import { User } from './user';
+import { DBoperation } from './DB-operations';
 
 @Injectable({
   providedIn: 'root',
@@ -12,15 +13,13 @@ export class AuthService {
   admin = new BehaviorSubject(false);
   constructor(
     private _Router: Router,
-    private _AuthGuardService: AuthGuardService
+    private _AuthGuardService: AuthGuardService,
+    private _DBo : DBoperation,
   ) {}
   signUp(registerValues: User) {
-    let users: User[] = [];
-    users = JSON.parse(localStorage.getItem('users') || '[]');
-
-    users.push(registerValues);
-    console.log(users);
-    localStorage.setItem('users', JSON.stringify(users));
+    //let result = this._DBo.addStudent(registerValues).subscribe((response)=>{console.log("This respone is ",response)});
+    let result1 = this._DBo.getStudent(registerValues.mail).subscribe((response)=>{console.log("This respone is ",response)});
+    console.log(result1);
   }
   login(loginValues: User) {
     let users: User[] = [];
