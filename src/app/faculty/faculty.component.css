@@ -1,0 +1,27 @@
+    button{
+    width: 300px;
+    height: 60px;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #0b8c8c;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 80px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn1{
+    margin-left: 16.5cm;
+}
+
+#btn2{
+    margin-left: 16.5cm;
+}
+
+button:hover {
+    background: #044d4d;
+  }

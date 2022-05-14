@@ -34,6 +34,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { environment } from 'src/environments/environment';
+import { FacultyComponent } from './faculty/faculty.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import { environment } from 'src/environments/environment';
     ProfileComponent,
     EditProfileComponent,
     AdminPageComponent,
+    FacultyComponent,
     
   ],
   imports: [
