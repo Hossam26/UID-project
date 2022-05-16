@@ -7,6 +7,7 @@ import {
   HttpEventType,
   HttpHeaders,
 } from '@angular/common/http';
+
 import { BehaviorSubject, Observable } from 'rxjs';
 import { AngularFireDatabase} from '@angular/fire/compat/database';
 
@@ -23,17 +24,8 @@ export class DBoperation {
       'Access-Control-Allow-Origin': '*',
     }),
   };
-  getStudent(id: any): Observable<any> {
-    let result = this.http.get<User[]>(this.baseURL + '/Students.json/');
-    //console.log(this.db.database.ref('/Students'));
-    //console.log(this.db.list('/Students'));
-    let str = result.subscribe(response => {
-      //response.forEach((user)=>{console.log(user.mail)});
-      console.log("Respone issss   ",response[0]);
-      Object.values(response).forEach((element)=>{console.log("ELEMENT  ",element)})
-      
-    });
-    console.log("Resultttttttt  ",result);
+  getStudent(mail:string): Observable<any> {
+    let result = this.http.get<User[]>(this.baseURL + '/Students.json?orderBy=mail&startAt=hossam@gmail.com');
     return result;
   }
   addStudent(user: User): Observable<User> {

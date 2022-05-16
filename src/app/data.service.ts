@@ -8,8 +8,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class DataService {
   constructor(private data: DBoperation) {}
+  user = new BehaviorSubject({})
 
-  getUserData(id: any): Observable<User> {
+  getUserData(id: any): Observable<User[]> {
     return this.data.getStudent(id);
   }
   editUser(user: User) {

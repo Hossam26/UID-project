@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-edit-profile',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-profile.component.css']
 })
 export class EditProfileComponent implements OnInit {
-
-  constructor() { }
+  user = {}
+  constructor(private data : DataService)
+  {
+    this.user = data.user.value
+    console.log('Edit User ', this.user)
+  }
 
   ngOnInit(): void {
   }

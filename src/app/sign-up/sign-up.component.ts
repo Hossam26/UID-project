@@ -41,11 +41,14 @@ export class SignUpComponent implements OnInit {
     mail: new FormControl(null, [Validators.required, Validators.email]),
     pass: new FormControl(null, [
       Validators.required,
-      Validators.pattern(/[A-Za-z]{1,}[0-9]{1,}/),
-      Validators.minLength(8),
+      Validators.pattern(/[a-z0-9]/),
+      Validators.minLength(5),
     ]),
   });
   signup() {
+    if(this.registerForm.invalid){
+      return
+    }
     this._AuthService.signUp(this.registerForm.value);
     this._Router.navigateByUrl('/log-in');
   }

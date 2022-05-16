@@ -32,21 +32,15 @@ export class LogInComponent implements OnInit {
     mail: new FormControl(null, [Validators.required, Validators.email]),
     pass: new FormControl(null, [
       Validators.required,
-      Validators.pattern(/[A-Za-z]{1,}[0-9]{1,}/),
-      Validators.minLength(8),
+      Validators.pattern(/[a-z0-9]/),
+      Validators.minLength(5),
     ]),
   });
   login = async () => {
-    const res= await this._AuthService.login(this.loginForm.value);
-    if(res){
-      localStorage.setItem('token', 'true');
-      this._AuthGuardService.isLogin.next(true);
-      location.href = '/home';
-    }
-    else{
+    if(this.loginForm.invalid){
       return
     }
-  
+    this._AuthService.login(this.loginForm.value); 
     
   };
   ngOnInit(): void {}
