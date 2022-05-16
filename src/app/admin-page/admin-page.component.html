@@ -48,21 +48,22 @@
     <th>Id</th>
     <th>First Name</th>
     <th>Second Name</th>
+    <th>Delete</th>
   </tr>
   
-  <tr *ngFor="let item of users">
+  <tr *ngFor="let item of users;let i=index" >
     <td><input type="checkbox" id="check1">
       <label for="check1"> Select</label></td>
     <td><label>{{item.userName}} </label></td>
     <td><label  >{{item.fname}}</label></td>
     <td><label>{{item.lname}}</label></td>
+    <td><button style="display: inline-block;" (click)="deleteStudent(userId[i])"> Delete</button>
+</td>
   </tr>
 </table>
 
 <br><br>
 
-<button style="display: inline-block;margin-left: 5cm;">Accept</button>
-<button style="display: inline-block; margin-left: 18cm;">Delete</button>
 
 <br><br>
 <br><br>

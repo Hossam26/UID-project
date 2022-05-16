@@ -40,12 +40,14 @@ export class DBoperation {
     );
   }
   async updateStudent(user: User): Promise<any> {
+  console.log(localStorage.getItem('userId'));
     let db=getDatabase()
     await update(ref(db,`/Students/${localStorage.getItem('userId')}`),user)
          
   
   }
   async  Deletestudent(id: any): Promise<any> {
+    console.log("dddddde",id)
     let db=getDatabase()
     await remove(ref(db,`/Students/${id}`))
        
