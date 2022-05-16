@@ -49,12 +49,13 @@
     <th>First Name</th>
     <th>Second Name</th>
   </tr>
-  <tr>
+  
+  <tr *ngFor="let item of users">
     <td><input type="checkbox" id="check1">
       <label for="check1"> Select</label></td>
-    <td><input></td>
-    <td><input></td>
-    <td><input></td>
+    <td><label>{{item.userName}} </label></td>
+    <td><label  >{{item.fname}}</label></td>
+    <td><label>{{item.lname}}</label></td>
   </tr>
 </table>
 

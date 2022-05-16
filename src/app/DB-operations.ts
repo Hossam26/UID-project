@@ -7,9 +7,9 @@ import {
   HttpEventType,
   HttpHeaders,
 } from '@angular/common/http';
-
+import {getDatabase,get,update,ref,remove} from 'firebase/database'
 import { BehaviorSubject, Observable } from 'rxjs';
-import { AngularFireDatabase} from '@angular/fire/compat/database';
+import { AngularFireDatabase}  from '@angular/fire/compat/database';
 
 @Injectable({
   providedIn: 'root',
@@ -24,24 +24,31 @@ export class DBoperation {
       'Access-Control-Allow-Origin': '*',
     }),
   };
+  getAllStudent(): Observable<any> {
+    let result = this.http.get<any>(this.baseURL + `/Students.json`);
+    return result;
+  }
   getStudent(mail:string): Observable<any> {
-    let result = this.http.get<User[]>(this.baseURL + '/Students.json?orderBy=mail&startAt=hossam@gmail.com');
+    let result = this.http.get<any>(this.baseURL + `/Students.json?orderBy="mail"&equalTo="${mail}"&print=pretty`);
     return result;
   }
   addStudent(user: User): Observable<User> {
+    console.log("addd");
+    
     return this.http.post<User>(
       this.baseURL + '/Students.json/', user
     );
   }
-  updateStudent(user: User): Observable<User> {
-    return this.http.put<User>(
-      this.baseURL + '/Students.json/' , user
-    );
+  async updateStudent(user: User): Promise<any> {
+    let db=getDatabase()
+    await update(ref(db,`/Students/${localStorage.getItem('userId')}`),user)
+         
+  
   }
-  Deletestudent(id: any): Observable<User> {
-    return this.http.delete<User>(
-      this.baseURL + '/Students.json/' + id,
-      this.httpOptions
-    );
+  async  Deletestudent(id: any): Promise<any> {
+    let db=getDatabase()
+    await remove(ref(db,`/Students/${id}`))
+       
+  
   }
 }

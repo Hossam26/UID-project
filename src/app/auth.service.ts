@@ -20,9 +20,17 @@ export class AuthService {
   ) {}
 
   signUp(registerValues: User) {
-    let result = this._DBo.addStudent(registerValues).subscribe((response)=>{console.log("This respone is ",response)});
-    //let result1 = this._DBo.getStudent().subscribe((response)=>{console.log("This respone is ",response)});
-    console.log(result);
+        
+    this._DBo.getStudent(registerValues.mail).subscribe((response)=>{console.log("This respone is ",response)
+    if(Object.values(response).length==0){
+
+      this._DBo.addStudent(registerValues).subscribe((response)=>{ this._Router.navigateByUrl('/log-in');});
+
+    } else{
+      console.log("registered");
+      
+    }
+  });
   }
 
   login(loginValues: User) {
@@ -30,20 +38,35 @@ export class AuthService {
     
     
     
-    let result1 = this._DBo.getStudent(loginValues.mail).subscribe((response)=>{
-      Object.values(response as User[]).forEach((element)=>{
-        console.log("elementtt",element);
-        
-        if(element.mail == loginValues.mail && element.pass == loginValues.pass)
+     this._DBo.getStudent(loginValues.mail).subscribe((element)=>{
+      let user=Object.values<User>(element)[0]
+
+      console.log("ddd",element);
+      
+    if(user.mail == loginValues.mail && user.pass == loginValues.pass)
         {
-          this._data.user.next(element); 
+          localStorage.setItem("User",JSON.stringify(user))
+        
+         console.log("this",this._data.user.getValue());
          
 
           localStorage.setItem('token', 'true');
+          localStorage.setItem("userId", JSON.stringify( Object.keys(element)));
           this._AuthGuardService.isLogin.next(true);
-          //location.href = '/home';
+          console.log("admin",user);
+          
+          if(user.mail.includes('admin')){
+            this._Router.navigateByUrl('/admin');
+            this.admin.next(true)
+            this._AuthGuardService.isLogin.next(true);
+
+          }
+          else{
+            location.href = '/home';
+
+          }
         }
-      })
+     
     });
 
     /*let users: User[] = [];

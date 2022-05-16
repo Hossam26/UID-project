@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 import { DataService } from '../data.service';
 declare const $: any;
   $(document).ready(function () {
@@ -32,7 +33,11 @@ declare const $: any;
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private _data:DataService) {
+  constructor(private _data:DataService,private _auth:AuthService) {
+    this._data.user.next(JSON.parse(localStorage.getItem("User")||"{}"))
+   if(this._data.user.getValue().mail.includes('@admin')){
+     this._auth.admin.next(true)
+   }
   }
   ngOnInit(): void {}
 }

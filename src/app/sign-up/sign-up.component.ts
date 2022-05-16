@@ -50,7 +50,7 @@ export class SignUpComponent implements OnInit {
       return
     }
     this._AuthService.signUp(this.registerForm.value);
-    this._Router.navigateByUrl('/log-in');
+   
   }
   ngOnInit(): void {}
 }

@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   userData: User | any;
   constructor(private _data: DataService, private ser: AuthService) {
     this._data
-      .getUserData(this.ser.usermail)
+      .getUserData(this.ser.usermail.getValue())
       .subscribe((arg) => (this.userData = arg));
   }
 

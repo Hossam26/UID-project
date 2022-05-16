@@ -11,15 +11,17 @@ import { AuthService } from '../auth.service';
 })
 export class NavbarComponent implements OnInit {
   userData: User | any;
+  admin:boolean=false
   constructor(
     private _Router: Router,
     private _AuthGuardService: AuthGuardService,
     private _data: DataService,
     private _Auth: AuthService
   ) {
-    this._data
-      .getUserData(this._Auth.usermail)
-      .subscribe((arg) => (this.userData = arg));
+    this._data.user.subscribe((user)=>{
+      this.userData=user
+    })
+    this._Auth.admin.subscribe((res)=>{this.admin=res})
   }
   logout() {
     localStorage.removeItem('token');

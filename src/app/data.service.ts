@@ -8,13 +8,16 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class DataService {
   constructor(private data: DBoperation) {}
-  user = new BehaviorSubject({})
-
-  getUserData(id: any): Observable<User[]> {
+  user = new BehaviorSubject<User|any>({})
+ 
+  getAllUsers(){
+    return 
+  }
+  getUserData(id: string): Observable<User> {
     return this.data.getStudent(id);
   }
   editUser(user: User) {
-    this.data.updateStudent(user);
+    return this.data.updateStudent(user);
   }
   EnrollCourseToUser(course: any) {
     let user: User = JSON.parse(localStorage.getItem('currentUser') || '{}');

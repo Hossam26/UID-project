@@ -40,11 +40,13 @@
                      <h4 class="d-inline mx-1">{{userData.fname}}</h4>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li *ngIf="admin"><a class="dropdown-item" routerLink='/admin' href="#">Admin</a></li>
+
                         <li><a class="dropdown-item" routerLink='/profile'>Profile</a></li>
                        <li><a class="dropdown-item" routerLink='/log-in' href="#">login</a></li>
 
                         <li><a class="dropdown-item" (click)="logout()" href="">Logout </a></li>
-                
+
                 
                     </ul>
                 
