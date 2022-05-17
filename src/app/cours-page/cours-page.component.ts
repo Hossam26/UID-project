@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../data.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-cours-page',
@@ -9,7 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class CoursPageComponent implements OnInit {
   id: any = 0;
   contents: Array<any> = [];
-  constructor(private _ActivatedRoute: ActivatedRoute) {
+  constructor(private _ActivatedRoute: ActivatedRoute, private data:DataService) {
+
     this.id = Number(_ActivatedRoute.snapshot.paramMap.get('id'));
     if (this.id == 1) {
       this.contents = this.course_content1;
@@ -196,6 +199,13 @@ export class CoursPageComponent implements OnInit {
       vid: '4 videos (Total 49 min), 2 readings, 2 quizzes',
     },
   ];
+
+  enroll()
+  {
+    let us: User | any = {}
+    us = this.data.user.getValue()
+    us.courses.push(this.course_name[this.id])
+  }
 
   ngOnInit(): void {}
 }

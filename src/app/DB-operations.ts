@@ -33,6 +33,7 @@ export class DBoperation {
     return result;
   }
   addStudent(user: User): Observable<User> {
+    user.courses=[]
     console.log("addd");
     
     return this.http.post<User>(
