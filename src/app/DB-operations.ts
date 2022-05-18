@@ -41,6 +41,8 @@ export class DBoperation {
     );
   }
   async updateStudent(user: User): Promise<any> {
+    console.log("courses",user.courses);
+    
   console.log(localStorage.getItem('userId'));
     let db=getDatabase()
     await update(ref(db,`/Students/${localStorage.getItem('userId')}`),user)

@@ -51,13 +51,20 @@ export class AuthService {
          
 
           localStorage.setItem('token', 'true');
-          localStorage.setItem("userId", JSON.stringify( Object.keys(element)[0]));
+          localStorage.setItem("userId", Object.keys(element)[0]);
           this._AuthGuardService.isLogin.next(true);
           console.log("admin",user);
+          console.log("check",user);
           
           if(user.mail.includes('admin')){
             this._Router.navigateByUrl('/admin');
             this.admin.next(true)
+            this._AuthGuardService.isLogin.next(true);
+
+          }
+          else  if(user.mail.includes('faculty')){
+            this._Router.navigateByUrl('/faculty');
+            
             this._AuthGuardService.isLogin.next(true);
 
           }

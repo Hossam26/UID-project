@@ -1,4 +1,4 @@
 export interface Course{
-    name : string
-    about : string
+    courseName : string
+    about_course : string
 }

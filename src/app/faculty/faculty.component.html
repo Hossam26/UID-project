@@ -2,6 +2,70 @@
             margin-top: 50px; margin-left: 50px;">Faculty Page</h1>
 <br><br>
 
-<button id = 'btn1'> View Students</button>
-<button id = 'btn2'> Upload Documents</button>
+<button id = 'btn1' (click)="view()"> View Students</button>
+
+
+<div *ngIf="show"  class="py-4">
+
+<br><br>
+<h2><span style="color: rgb(8, 8, 130);margin-left: 150px;">Students </span></h2>
+
+<style>
+  table,th,td{
+   
+    text-align: left;
+    padding: 8px;
+}
+  table{
+    /* margin-left: 150px; */
+    border-collapse: collapse;
+    width: 100%;
+  }
+  tr:nth-child(even){background-color: #f2f2f2}
+
+  th {
+    background-color: #078f8f;
+    color: white;
+  }
+
+  button {
+    width: 200px;
+    height: 46px;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    /* background: rgb(4, 4, 159); */
+    background: #0b8c8c;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #044d4d;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>First Name</th>
+    <th>Second Name</th>
+  </tr>
+  
+  <tr *ngFor="let item of users;let i=index" >
+ 
+    <td><label>{{item.userName}} </label></td>
+    <td><label>{{item.fname}}</label></td>
+    <td><label>{{item.lname}}</label></td>
+    <td>
+</td>
+  </tr>
+</table>
+</div>
+<button *ngIf="!show"  id = 'btn2'> Upload Documents</button>
 

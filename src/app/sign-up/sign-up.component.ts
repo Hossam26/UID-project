@@ -44,6 +44,7 @@ export class SignUpComponent implements OnInit {
       Validators.pattern(/[a-z0-9]/),
       Validators.minLength(5),
     ]),
+    courses: new FormControl([])
   });
   signup() {
     if(this.registerForm.invalid){

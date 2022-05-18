@@ -19,12 +19,13 @@ export class DataService {
   editUser(user: User) {
     return this.data.updateStudent(user);
   }
-  EnrollCourseToUser(course: any) {
-    let user: User = JSON.parse(localStorage.getItem('currentUser') || '{}');
-    let courses = [];
-    courses = JSON.parse(localStorage.getItem(user.mail) || '[]');
-    courses.push(course);
-    localStorage.setItem(user.mail, JSON.stringify(courses));
+  EnrollCourseToUser(user: User) {
+    // let user: User = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    // let courses = [];
+    // courses = JSON.parse(localStorage.getItem(user.mail) || '[]');
+    // courses.push(course);
+    // localStorage.setItem(user.mail, JSON.stringify(courses));
+    this.data.updateStudent(user)
   }
   getCoursesOfUser() {
     let user: User = JSON.parse(localStorage.getItem('currentUser') || '{}');

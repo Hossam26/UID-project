@@ -8,7 +8,7 @@ import { OnlineDegreesComponent } from './online-degrees/online-degrees.componen
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { AuthGuardService } from './auth-guard.service';
-
+import { FacultyComponent } from './faculty/faculty.component';
 import { CoursPageComponent } from './cours-page/cours-page.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { AddNewCourseComponent } from './add-new-course/add-new-course.component';
@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'log-in', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'about', component: AboutComponent, canActivate: [AuthGuardService] },
+  { path: 'faculty', component: FacultyComponent, canActivate: [AuthGuardService] },
   {
     path: 'online-degrees',
     component: OnlineDegreesComponent,

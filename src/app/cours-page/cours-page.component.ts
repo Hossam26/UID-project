@@ -202,9 +202,17 @@ export class CoursPageComponent implements OnInit {
 
   enroll()
   {
-    let us: User | any = {}
-    us = this.data.user.getValue()
+     let us: User = this.data.user.getValue()
+     if(!us.courses){
+      us.courses=[]
+
+     }
+     console.log("ggg",us.courses);
+     
     us.courses.push(this.course_name[this.id])
+    
+    
+    this.data.EnrollCourseToUser(us)
   }
 
   ngOnInit(): void {}

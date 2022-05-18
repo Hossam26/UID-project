@@ -23,7 +23,9 @@ export class NavbarComponent implements OnInit {
     })
     this._Auth.admin.subscribe((res)=>{this.admin=res})
   }
-  logout() {
+  logout() {location.href="/log-in"
+    localStorage.clear()
+
     localStorage.removeItem('token');
     this.userData.fname = 'User';
     localStorage.removeItem('currentUser');
